@@ -24,8 +24,23 @@ setSecondsTimeoutArgs(function(arg1, arg2) {
 
 function setSecondsTimeoutArgs(cb, delayInSeconds, ...args) {
   // Your code here
+  let delay = (delayInSeconds * 1000)
+  setTimeout(cb, delay, ...args);
+
 }
 
+ function printSum(num1, num2, num3) {
+  console.log(num1 + num2 + num3);
+}
+
+let resultCal = setSecondsTimeoutArgs(printSum, 0.25, 5, 1, 4);
+console.log(resultCal)
+
+let resultCal2 = setSecondsTimeoutArgs(function(arg1, arg2) {
+  console.log(arg1 + '-' + arg2);
+}, 0.7, 'hello', 'world'); // should print 'hello-world' after 700ms
+
+console.log(resultCal2)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeoutArgs;
