@@ -48,7 +48,7 @@ const tasks = [sayHello, sayGoodbye, shout];
 const delays = [500, 200, 900];
 
 
-console.log(batchTimeouts(tasks, delays));
+batchTimeouts(tasks, delays)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
