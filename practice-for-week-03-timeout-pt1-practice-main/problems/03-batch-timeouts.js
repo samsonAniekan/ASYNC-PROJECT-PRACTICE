@@ -38,9 +38,7 @@ function batchTimeouts(callbacks, delays) {
   for (let i = 0; i < 3; i++) {
     timeouts.push(setTimeout(callbacks[i], delays[i]));
   }
-
   return timeouts;
-
 }
 
 const sayHello = () => console.log('hi');
